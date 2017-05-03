@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    @Styles.Render("~/Content/css")
+
+</head>
+<body>
+    <div class="header">
+    <header class="row">
+        <div class="col-12 row">
+            <div class="col-3">
+                <img src="~/content/image-s.png" class="img" alt="My Face" />
+            </div>
+            <div class="col-6">Jeremy K. Almas-Professional Web Developer</div>
+            <a href="https://www.linkedin.com/in/jeremy-almas-b51a07138/" class="col-3">
+                <img src="~/content/linkedinicon.png" alt="linkedinicon" />
+            </a>
+        </div>
+    </header>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            &copy; @DateTime.Now.Year - Jeremy K. Almas
+        </footer>
+    </div>
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+    <script src="~/app/app.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+</body>
+</html>
+@*
+<div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav">
+        <li>@Html.ActionLink("Application name", "Index", "Home", new { area = "" }, null)</li>
+        <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>
+        <li>@Html.ActionLink("API", "Index", "Help", new { area = "" }, null)</li>
+    </ul>
+</div>
+*@
